@@ -1,6 +1,6 @@
-# Rick and Morty
+# Form Survey
 
-In this project, I created a Rick and Morty card character using state in react js
+In this project, I created a form survey using state in react js
 
 ## Preview
 
