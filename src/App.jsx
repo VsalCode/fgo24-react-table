@@ -16,7 +16,7 @@ function Table(props) {
           <td>{props.age}</td>
           <td>{props.gender}</td>
           <td>{props.smoker}</td>
-          <td></td>
+          <td>{props.cigarette}</td>
         </tr>
       </tbody>
     </table>
@@ -30,13 +30,14 @@ const App = () => {
       age: "",
       gender: "",
       smoker: "",
+      cigarette: ""
     },
   ]);
 
   function HandleForm(e) {
     e.preventDefault();
 
-    console.log(data);
+    // console.log(data);
   }
 
   function HandleChange(e) {
@@ -59,18 +60,18 @@ const App = () => {
         <br />
         <div>
           <p>Apa Jenis Kelamin Anda</p>
-          <input type="radio" id="gender1" name="gender" value={data.gender} onChange={HandleChange} />
+          <input type="radio" id="gender1" name="gender" value="Men" onChange={HandleChange} />
           <label for="gender1">Laki-Laki</label>
-          <input type="radio" name="gender" id="gender2" value={data.gender} onChange={HandleChange} />
+          <input type="radio" name="gender" id="gender2" value="Woman" onChange={HandleChange} />
           <label for="gender2">Perempuan</label>
         </div>
         <br />
         <div>
           <p>Apakah anda seorang perokok</p>
           <div>
-            <input type="radio" name="smoker" id="smoker" value={data.smoker} onChange={HandleChange} />
+            <input type="radio" name="smoker" id="smoker" value="smoker" onChange={HandleChange} />
             <label for="smoker">ya</label>
-            <input type="radio" name="smoker" id="smoker" value={data.smoker} onChange={HandleChange} />
+            <input type="radio" name="smoker" id="smoker" value="non smoker" onChange={HandleChange} />
             <label for="notSmoker">tidak</label>  
           </div>
         </div>
@@ -78,16 +79,12 @@ const App = () => {
         <div>
           <p>Jika anda perokok, rokok apa yang anda pernah coba</p>
           <div>
-            <input type="checkbox" id="gudangGaram" name="cigarette" checked />
+            <input type="checkbox" id="gudangGaram" name="cigarette" value="Gudang Garam" onChange={HandleChange}/>
             <label for="gudangGaram">Gudang Garam</label>
-            <input type="checkbox" id="sampoerna" name="cigarette" />
+            <input type="checkbox" id="sampoerna" name="cigarette" value="Sampoerna" onChange={HandleChange}/>
             <label for="sampoerna">Sampoerna</label>
-            <input type="checkbox" id="Marlboro" name="cigarette" />
+            <input type="checkbox" id="Marlboro" name="cigarette" value="Marlboro" onChange={HandleChange}/>
             <label for="Marlboro">Marlboro</label>
-            <input type="checkbox" id="other" name="cigarette" />
-            <label for="other">yang lain</label>
-            <input type="checkbox" id="dontKnow" name="cigarette" />
-            <label for="dontKnow">tidak tahu</label>
           </div>
         </div>
         <br />
