@@ -1,6 +1,6 @@
 # Form Survey
 
-In this project, I created a form survey using state in react js
+This project is a simple form survey built with React and Vite, utilizing React's useState to manage form data and dynamically render a table of responses.
 
 ## Preview
 
